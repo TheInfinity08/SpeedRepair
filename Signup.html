@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="/css/SignupStyle.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body ng-controller="SignupController">
+    <div class="box">
+      <div class="mainBox">
+        <div class="content">
+          <!-- <form> -->
+            <h1 class="mb-3 fw-normal head">SIGN UP</h1>
+            <h2 class="mb-3 fw-normal head" ng-model="warn"></h2>
+            <div class="form-floating mrg">
+              <input
+                type="email"
+                class="form-control inpCss"
+                id="floatingInput"
+                placeholder="name@example.com"
+                ng-model="email"
+              />
+              <label for="floatingInput">email</label>
+            </div>
+            <div class="form-floating mrg">
+              <input
+                type="password"
+                class="form-control inpCss"
+                id="floatingPassword"
+                placeholder="Password"
+                ng-model="password"
+              />
+              <label for="floatingPassword">password</label>
+            </div>
+            <div class="form-floating mrg">
+              <button class="w-100 btn btn-lg btn-danger btnFont" type="button" ng-click="sendPost()">
+                Sign up
+              </button>
+            </div>
+            <p class="mt-5 mb-3 txtCol">© 2023 Speed Repair Inc.</p>
+          <!-- </form> -->
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/b4ba0e8776.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/angular.min.js"></script>
+    <script src="/angular-route.min.js"></script>
+    <script src="/angular-cookies.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

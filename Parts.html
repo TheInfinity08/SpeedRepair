@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select your parts</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/PartsStyle.css" />
+  </head>
+  <body ng-controller="PartsController">
+      
+    <div class="box">
+      <div class="mainBox">
+        <div class="content">
+          
+          
+      <div class="head">
+        FIND AUTO PARTS FOR ANY MODEL
+      </div>
+      <div class="container">
+        <div class="headTxt">
+          Browse our shop for hundreds of different automotive parts
+        </div>
+        <button type="button" class="btn btn-outline-danger btnFont" ng-click="logout()">Log out</button>
+        <button type="button" class="btn btn-outline-danger btnFont" ng-click="goToCart()">Go to Cart</button>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card">
+              <svg class="bd-placeholder-img card-img-top part carburetor" width="100%" height="225" role="img"
+                  preserveAspectRatio="xMidYMid slice" focusable="true"></svg>
+
+                <div class="card-body">
+                  <h2 class="card-text" ng-model="x1">Carburetor</h2>
+                  <h4 ng-model="y1">$298.99</h4>
+                  <div class="btnCenter">
+                    <div>
+                      <button type="button" class="btn btn-outline-danger" style="
+                        --bs-btn-padding-y: 0.25rem;
+                        --bs-btn-padding-x: 0.5rem;
+                        --bs-btn-font-size: 0.75rem;
+                      " ng-click="details('Carburetor','298.99','2')">
+                        BUY
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top part tire" width="100%" height="225" role="img"
+                  preserveAspectRatio="xMidYMid slice" focusable="true"></svg>
+
+                <div class="card-body">
+                  <h2 class="card-text">Tire Parts</h2>
+                  <h4>$799.00</h4>
+                  <div class="btnCenter">
+                    <div>
+                      <button type="button" class="btn btn-outline-danger" style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                        " ng-click="details('Tire Parts','799.00','1')">
+                        BUY
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top part valve" width="100%" height="225" role="img"
+                  preserveAspectRatio="xMidYMid slice" focusable="true"></svg>
+
+                <div class="card-body">
+                  <h2 class="card-text">Engine Valve</h2>
+                  <h4>$455.00</h4>
+                  <div class="btnCenter">
+                    <div>
+                      <button type="button" class="btn btn-outline-danger" style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                    " ng-click="details('Engine Valve','455.00','2')">
+                        BUY
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top part piston" width="100%" height="225" role="img"
+                  preserveAspectRatio="xMidYMid slice" focusable="true"></svg>
+
+                <div class="card-body">
+                  <h2 class="card-text">Engine Piston NH220</h2>
+                  <h4>$2599.00</h4>
+                  <div class="btnCenter">
+                    <div>
+                      <button type="button" class="btn btn-outline-danger" style="
+                      --bs-btn-padding-y: 0.25rem;
+                      --bs-btn-padding-x: 0.5rem;
+                      --bs-btn-font-size: 0.75rem;
+                      " ng-click="details('Engine Piston NH220','2599.00','3')">
+                        BUY
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top part dBrake" width="100%" height="225" role="img"
+                  preserveAspectRatio="xMidYMid slice" focusable="true"></svg>
+
+                <div class="card-body">
+                  <h2 class="card-text">Brake Disks</h2>
+                  <h4>$679.00</h4>
+                  <div class="btnCenter">
+                    <div>
+                      <button type="button" class="btn btn-outline-danger" style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                    " ng-click="details('Brake Disks','679.00','4')">
+                        BUY
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top part susp" width="100%" height="225" role="img"
+                  preserveAspectRatio="xMidYMid slice" focusable="true"></svg>
+
+                <div class="card-body">
+                  <h2 class="card-text">Suspensions</h2>
+                  <h4>$899.00</h4>
+                  <div class="btnCenter">
+                    <div>
+                      <button type="button" class="btn btn-outline-danger" style="
+                      --bs-btn-padding-y: 0.25rem;
+                      --bs-btn-padding-x: 0.5rem;
+                      --bs-btn-font-size: 0.75rem;
+                      " ng-click="details('Suspensions','899.00','5')">
+                        BUY
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top part heatValve" width="100%" height="225" role="img"
+                  preserveAspectRatio="xMidYMid slice" focusable="true"></svg>
+
+                <div class="card-body">
+                  <h2 class="card-text">Heater Control Valve</h2>
+                  <h4>$799.00</h4>
+                  <div class="btnCenter">
+                    <div>
+                      <button type="button" class="btn btn-outline-danger" style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                    " ng-click="details('Heater Control Valve','799.00','6')">
+                        BUY
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top part supercharger" width="100%" height="225" role="img"
+                  preserveAspectRatio="xMidYMid slice" focusable="true"></svg>
+
+                <div class="card-body">
+                  <h2 class="card-text">Supercharger</h2>
+                  <h4>$1200.00</h4>
+                  <div class="btnCenter">
+                    <div>
+                      <button type="button" class="btn btn-outline-danger" style="
+                  --bs-btn-padding-y: 0.25rem;
+                  --bs-btn-padding-x: 0.5rem;
+                  --bs-btn-font-size: 0.75rem;
+                  " ng-click="details('Supercharger','1200.00','5')">
+                        BUY
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top part turbocharger" width="100%" height="225" role="img"
+                  preserveAspectRatio="xMidYMid slice" focusable="true"></svg>
+
+                <div class="card-body">
+                  <h2 class="card-text">Turbocharger</h2>
+                  <h4>$1399.99</h4>
+                  <div class="btnCenter">
+                    <div>
+                      <button type="button" class="btn btn-outline-danger" style="
+                        --bs-btn-padding-y: 0.25rem;
+                        --bs-btn-padding-x: 0.5rem;
+                        --bs-btn-font-size: 0.75rem;
+                        " ng-click="details('Turbocharger','1399.99','9')">
+                        BUY
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            
+          </div>
+        </div>
+      </div>
+      </div>      
+      
+              </div>
+            </div>
+          </div>
+      <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/b4ba0e8776.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/angular.min.js"></script>
+    <script src="/angular-route.min.js"></script>
+    <script src="/angular-cookies.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Audiowide&family=Cabin+Sketch:wght@700&family=Cookie&family=Faster+One&family=Gochi+Hand&family=Lobster+Two&family=Maven+Pro&family=Monoton&family=Orbitron:wght@600&family=Pacifico&family=Press+Start+2P&family=Righteous&family=Rubik+Moonrocks&family=Scada&family=Special+Elite&family=Viga&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Orbitron", cursive;
+  font-size: x-large;
+}
+
+.head {
+  font-family: "Faster One", cursive;
+  font-size: 60px;
+}
+
+.txtCol {
+  color: whitesmoke;
+}
+
+.box {
+  background: url("/imgs/carImg/img21.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100% 100%;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.8;
+}
+
+.mainBox {
+  text-align: center;
+  margin: 10% 30% 10% 30%;
+  backdrop-filter: blur(25px);
+  width: 40%;
+  border-radius: 50px;
+}
+
+.content {
+  text-align: center;
+  margin: 10% 20% 10% 20%;
+}
+
+.btnFont {
+  font-family: "Orbitron", cursive;
+}
+
+.mrg {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.inpCss {
+  background: transparent;
+}

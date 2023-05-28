@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Homepage</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/HomepageStyle.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+  </head>
+  <body ng-controller="HomeController">
+    <div class="top">
+      <div class="bd-example carouselSection">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="0"
+              class=""
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+              class="active"
+              aria-current="true"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+              class=""
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="100">
+              <svg class="cItem w-100" width="800" height="800" id="cImg1">
+                <div class="carousel-caption changeColor1">
+                  <h1 class="mainFont">GET YOUR PARTS</h1>
+                  <p class="primaryFont">
+                    We here at SPEED REPAIR believe in delivering high quality automobile parts
+                    to ensure that your car is able to run at it's peak performance. From regulars
+                    to track cars, we got it all, and all of that too at it's best prices that you
+                    can get anywhere else. Buy your parts from us or get your vehicle to us and 
+                    we'll handle the rest with our excellent engineers to get your ride in it's 
+                    best shape ;)
+                  </p>
+                  <p>
+                    <a class="btn btn-lg carouselBtn primaryFont" ng-click="parts()">Buy Parts</a>
+                  </p>
+                </div>
+              </svg>
+            </div>
+            <div class="carousel-item" data-bs-interval="100">
+              <svg class="cItem w-100" width="800" height="800" id="cImg2">
+                <div class="carousel-caption changeColor1">
+                  <h1 class="mainFont">KNOW MORE ABOUT US</h1>
+                  <p class="primaryFont">
+                      Know how we started out and how it's going on so far, and how our excellent 
+                      engineers handle all your automobile requirements, so that your car always 
+                      outshines the other ones.... 
+                  </p>
+                  <p><a class="btn btn-lg carouselBtn primaryFont" href="#">About us</a></p>
+                </div>
+              </svg>
+            </div>
+            <div class="carousel-item" data-bs-interval="100">
+              <svg class="cItem w-100" width="800" height="800" id="cImg3">
+                <div class="carousel-caption changeColor1">
+                  <h1 class="mainFont">WE'VE WORKED WITH THE BEST</h1>
+                  <p class="primaryFont">
+                      Our garage in no ordinary one....Our high quality products are used by the likes
+                      of FERRARI,<br> RED BULL RACING, PORSCHE, LAMBORGHINI and also we're recognised as
+                      one of the best brands for handling automobile parts requirements by F1 racing.
+                  </p>
+                  <p>
+                    <a class="btn btn-lg carouselBtn primaryFont" href="#">Achievements</a>
+                  </p>
+                </div>
+              </svg>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon arrBtn"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="navbar navbar-expand-lg navBar">
+        <div class="container-fluid">
+          <img src="imgs/logo.png" alt="" srcset="" />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+            <button type="button" class="btn btn-outline-light btnFont" ng-click="signin()">Sign in</button>
+            <button type="button" class="btn btn-outline-danger btnFont" ng-click="signup()">Sign up</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="mid">
+      <div class="container">
+        <h2 class="mainFont">OUR CLIENTS</h2>
+        <section class="customer-logos slider">
+          <div class="slide"><img src="imgs/carLogo/ferrari.png" /></div>
+          <div class="slide"><img src="imgs/carLogo/rb.png" /></div>
+          <div class="slide"><img src="imgs/carLogo/wr.png" /></div>
+          <div class="slide"><img src="imgs/carLogo/prs.png" /></div>
+          <div class="slide"><img src="imgs/carLogo/amg.png" /></div>
+          <div class="slide"><img src="imgs/carLogo/f1.png" /></div>
+          <div class="slide"><img src="imgs/carLogo/vette.png" /></div>
+          <div class="slide"><img src="imgs/carLogo/lambo.png" /></div>
+          <div class="slide"><img src="imgs/carLogo/sup.png" /></div>
+        </section>
+      </div>
+    </div>
+
+    <div class="container marketing">
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider" />
+
+      <div class="row featurette">
+        <div class="col-md-13">
+          <div id="featImg1">
+            <h2 class="featurette-heading picFont">
+               CR228-D Turbochargers for Track Cars. 
+               <br>
+               <button type="button" class="btn btn-lg btn-outline-danger btnFont" ng-click="parts()">Shop your favourite parts NOW!!</button>
+              </h2>
+              <!-- <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p> -->
+          </div>
+        </div>
+      </div>
+      
+      <hr class="featurette-divider" />
+      
+      <div class="row featurette">
+        <div class="col-md-13">
+          <div id="featImg2">
+            <h2 class="featurette-heading picFont">
+              Philips D.I.S. Xenon H.I.D. Tail Lights
+              <br>
+              <button type="button" class="btn btn-lg btn-outline-danger btnFont" ng-click="parts()">Shop your favourite parts NOW!!</button>
+            </h2>
+            <!-- <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p> -->
+          </div>
+        </div>
+      </div>
+      
+      <hr class="featurette-divider" />
+
+      <div class="row featurette">
+        <div class="col-md-13">
+          <div id="featImg3">
+            <h2 class="featurette-heading picFont">
+              SPOILERS for BEST performance in racing
+              <br>
+              <button type="button" class="btn btn-lg btn-outline-danger btnFont" ng-click="parts()">Shop your favourite parts NOW!!</button>
+            </h2>
+            <!-- <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p> -->
+          </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider" />
+
+      <!-- /END THE FEATURETTES -->
+    </div>
+
+    <div class="bottom">
+
+      <p class="float-end text-white primaryFont">
+        © 2023 Speed Repair Inc. · <a href="#">Privacy</a> ·
+        <a href="#">Terms</a>
+      </p>
+        <img src="/imgs/logo.png" alt="" srcset="" />
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <!-- Twitter -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+
+          <!-- Google -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+
+          <!-- Instagram -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+
+          <!-- Linkedin -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </section>
+      
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/b4ba0e8776.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/Homepage.js"></script>
+    <script src="/angular.min.js"></script>
+    <script src="/angular-route.min.js"></script>
+    <script src="/angular-cookies.js"></script>
+    <script src="/app.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script> -->
+  </body>
+</html>

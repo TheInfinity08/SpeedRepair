@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Audiowide&family=Cabin+Sketch:wght@700&family=Cookie&family=Faster+One&family=Gochi+Hand&family=Lobster+Two&family=Maven+Pro&family=Monoton&family=Orbitron:wght@600&family=Pacifico&family=Press+Start+2P&family=Righteous&family=Rubik+Moonrocks&family=Scada&family=Special+Elite&family=Viga&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', cursive;
+  /* color: whitesmoke; */
+  color: #cf253f;
+}
+
+body
+{
+    background-color: #0a0e1a;
+}
+
+.mainFont
+{
+  font-family: 'Faster One', cursive;
+  font-size: 60px;
+
+}
+
+a
+{
+  color: #cf253f;
+}
+
+#myButton {
+  display: none;
+}

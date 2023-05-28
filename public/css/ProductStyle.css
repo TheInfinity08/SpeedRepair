@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Audiowide&family=Cabin+Sketch:wght@700&family=Cookie&family=Faster+One&family=Gochi+Hand&family=Lobster+Two&family=Maven+Pro&family=Monoton&family=Orbitron:wght@600&family=Pacifico&family=Press+Start+2P&family=Righteous&family=Rubik+Moonrocks&family=Scada&family=Special+Elite&family=Viga&display=swap');
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: #0a0e1a;
+}
+
+.product-details hr {
+    color: whitesmoke;
+    font-family: 'Orbitron', cursive;
+    transform: translateY(-0.7rem);
+    margin-left: 1rem;
+    border: none;
+    border-top: 1px solid black;
+}
+
+.product-details {
+    color: whitesmoke;
+    font-family: 'Orbitron', cursive;
+    margin: 5rem auto;
+    width: 90%;
+    display: flex;
+    justify-content:flex-start;
+}
+
+.product-image {
+    width: 25rem;
+}
+
+
+.product-image img:hover{
+    box-shadow: 0 0 10px #19376D;
+}
+
+.product-specs{
+    margin-left: 5rem;
+}
+
+.product-name h1 {
+    padding-left: 1rem;
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 0.08rem;
+}
+
+.product-price h1 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 0.5rem 1rem;
+}
+
+.product-color {
+    display: flex;
+    padding: 1rem 0 0 1rem;
+}
+
+.product-color ul {
+    display: flex;
+    width: 10rem;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.product-color h2 {
+    margin-top: 0.25rem;
+    font-size: 1rem;
+    font-weight: light;
+    letter-spacing: 0.08rem;
+}
+.product-color ul li{
+    cursor: pointer;
+}
+.color-selected{
+    border-radius: 50%;
+    border:3px solid #fff;
+    box-shadow: 0 0 0 2px #000;
+}
+
+.product-size {
+    display: flex;
+    padding-left: 1rem;
+    align-items: center;
+    gap: 3rem;
+}
+
+.product-size h2 {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: light;
+    letter-spacing: 0.08rem;
+}
+
+.product-size span {
+    display: flex;
+    margin: 1rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+    opacity: .5;
+}
+
+.product-size span:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.sizes {
+    display: flex;
+}
+
+.product-size span.size-selected {
+    opacity: 1;
+}
+
+.product-quantity {
+
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+
+.product-quantity input::-webkit-outer-spin-button,
+.product-quantity input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.product-quantity input { 
+    position: relative;
+    width: 4rem;
+    height: 2.3rem;
+    margin: 0.5rem 5px 2rem 2.1rem;
+    border: none;
+    background-color: whitesmoke;
+    text-align: center;
+    right: 1.4rem;
+}
+
+.product-quantity input:focus {
+    outline: none;
+}
+
+.product-quantity button:first-child {
+    position: relative;
+    left: 1rem;
+    bottom: 0.1rem;
+    border-radius: 5px 0 0 5px;
+}
+
+.product-quantity button:nth-child(3) {
+    position: relative;
+    right: 2.5rem;
+    bottom: 0.1rem;
+    border-radius: 0 5px 5px 0;
+}
+
+.product-quantity button:nth-child(4) {
+    position: relative;
+    bottom: 0.18rem;
+    margin-left: 0.5rem;
+}
+
+.product-description {
+    font-family: 'Faster One', cursive;
+    color: whitesmoke;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.product-description h2 {
+    color: #cf253f;
+    font-size: 2.3rem;
+    letter-spacing: 0.1rem;
+    /* opacity: 0.7; */
+}
+
+.product-description hr {
+    border: none;
+    border-top: 1px solid whitesmoke;
+}
+
+.product-description p{
+    font-family: 'Orbitron', cursive;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+@media screen and (max-width:700px) {
+    .product-details {
+        margin: 5rem auto;
+        width: 99%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .product-specs {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .product-image {
+        align-self: center;
+        width: 90%;
+        border: none;
+    }
+
+    .product-image img {
+        height: 30vh;
+    }
+
+    .product-quantity button:nth-child(4) {
+        position: relative;
+        bottom: 1rem;
+        margin: 2rem 0 0 0.5rem;
+    }
+
+    .product-description {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+.head
+{
+    color: #cf253f;
+    margin: 0 0 0 5%;
+    font-family: 'Faster One', cursive;
+    font-size: 60px;
+}

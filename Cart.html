@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cart</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/CartStyle.css" />
+    </head>
+
+    <body ng-controller="PartsController">
+    
+        <div class="container">
+          <main>
+            <div class="py-5 text-center">
+              <h1 class="mainFont">Billing & Cart</h1>
+              <h4>*** ONLY ON-DELIVERY CASH PAYMENTS ARE ACCEPTED ***</h4>
+            </div>
+        
+            <div class="row g-5">
+
+
+
+
+              <div class="col-md-5 col-lg-4 order-md-last">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                  <button type="button" class="btn btn-danger" ng-click="getDetails()" id="myButton">Get Cart Items</button>
+                  <span class="text-danger">Your cart</span>
+                  <span class="badge bg-danger rounded-pill">{{y}}</span>
+                </h4>
+
+                <ul class="list-group mb-3" ng-repeat="i in x">
+                  <li class="list-group-item d-flex justify-content-between lh-sm">
+                    <div>
+                      <h6 class="my-0">{{i.name}}</h6>
+                      Quantity:<small class="text-muted">{{i.qty}}</small>
+                    </div>
+                    <span class="text-muted">${{i.price}}</span>
+                    <button type="button" class="btn btn-outline-danger" ng-click="removeItem(i)">Remove</button>
+                  </li>
+                </ul>
+                
+                <li class="list-group-item d-flex justify-content-between">
+                  <span>Total (USD)</span>
+                  <strong>${{total}}</strong>
+                </li>
+
+              </div>
+
+
+
+
+              
+              <div class="col-md-7 col-lg-8">
+                <h4 class="mb-3">Billing address</h4>
+                <form class="needs-validation" novalidate="">
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <label for="firstName" class="form-label">First name</label>
+                      <input type="text" class="form-control" id="firstName" placeholder="" value="" required ng-model="fname">
+                      <div class="invalid-feedback">
+                        Valid first name is required.
+                      </div>
+                    </div>
+        
+                    <div class="col-sm-6">
+                      <label for="lastName" class="form-label">Last name</label>
+                      <input type="text" class="form-control" id="lastName" placeholder="" value="" required ng-model="lname">
+                      <div class="invalid-feedback">
+                        Valid last name is required.
+                      </div>
+                    </div>
+        
+                    <div class="col-12">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="you@example.com" required ng-model="email">
+                      <div class="invalid-feedback">
+                        Please enter a valid email address for shipping updates.
+                      </div>
+                    </div>
+        
+                    <div class="col-12">
+                      <label for="address" class="form-label">Address</label>
+                      <input type="text" class="form-control" id="address" placeholder="1234 Main St" required ng-model="addr1">
+                      <div class="invalid-feedback">
+                        Please enter your shipping address.
+                      </div>
+                    </div>
+        
+                    <div class="col-12">
+                      <label for="address2" class="form-label">Address 2</label>
+                      <input type="text" class="form-control" id="address2" placeholder="Apartment or suite" required ng-model="addr2">
+                    </div>
+        
+                    <div class="col-md-5">
+                      <label for="country" class="form-label">Country</label>
+                      <select class="form-select" id="country" required="" ng-model="country">
+                        <option value="">Choose...</option>
+                        <option>United States</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid country.
+                      </div>
+                    </div>
+        
+                    <div class="col-md-4">
+                      <label for="state" class="form-label">State</label>
+                      <select class="form-select" id="state" required="" ng-model="state">
+                        <option value="">Choose...</option>
+                        <option>California</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please provide a valid state.
+                      </div>
+                    </div>
+        
+                    <div class="col-md-3">
+                      <label for="zip" class="form-label">Zip</label>
+                      <input type="text" class="form-control" id="zip" placeholder="" required="" ng-model="zip">
+                      <div class="invalid-feedback">
+                        Zip code required.
+                      </div>
+                    </div>
+                  </div>
+        
+                  <hr class="my-4">
+
+                  <button class="w-100 btn btn-danger btn-lg" type="button">Download Order Bill</button>
+                </form>
+              </div>
+            </div>
+          </main>
+        
+          <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">© 2023 Speed Repair</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Privacy</a></li>
+              <li class="list-inline-item"><a href="#">Terms</a></li>
+              <li class="list-inline-item"><a href="#">Support</a></li>
+            </ul>
+          </footer>
+        </div>
+        
+
+      <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+      ></script>
+      <script
+      src="https://kit.fontawesome.com/b4ba0e8776.js"
+      crossorigin="anonymous"
+      ></script>
+      <script src="/angular.min.js"></script>
+      <script src="/angular-route.min.js"></script>
+      <script src="/angular-cookies.js"></script>
+      <script src="/app.js"></script>
+</body>
+</html>

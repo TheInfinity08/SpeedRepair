@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Audiowide&family=Cabin+Sketch:wght@700&family=Cookie&family=Faster+One&family=Gochi+Hand&family=Lobster+Two&family=Maven+Pro&family=Monoton&family=Orbitron:wght@600&family=Pacifico&family=Press+Start+2P&family=Righteous&family=Rubik+Moonrocks&family=Scada&family=Special+Elite&family=Viga&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.part
+{
+   width: 100%;
+   height: 330px;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-color: #121826;
+}
+.carburetor
+{
+  background-image: url("/imgs/partsImg/img2.jpg");
+}
+.tire
+{
+  background-image: url("/imgs/partsImg/img1.jpg");
+}
+.valve
+{
+  background-image: url("/imgs/partsImg/img2.jpg");
+}
+.piston
+{
+  background-image: url("/imgs/partsImg/img3.jpg");
+}
+.dBrake
+{
+  background-image: url("/imgs/partsImg/img4.jpg");
+}
+.susp
+{
+  background-image: url("/imgs/partsImg/img5.jpg");
+}
+.heatValve
+{
+  background-image: url("/imgs/partsImg/img6.jpg");
+}
+.supercharger
+{
+  background-image: url("/imgs/partsImg/img5.jpg");
+}
+.turbocharger
+{
+  background-image: url("/imgs/partsImg/img9.jpg");
+}
+
+.btn
+{
+  color: #cf253f;
+  border-color: #cf253f;
+}
+
+h2
+{
+  color: whitesmoke;
+}
+h4
+{
+  color: #cf253f;
+}
+
+
+.card-body
+{
+  text-align: center;
+  background-color: #121826;
+}
+
+.card
+{
+  font-family: 'Orbitron', cursive;
+  border-color: #121826;
+  margin: 5%;
+  border-radius: 10px;
+}
+.btnCenter
+{
+  margin: auto;
+}
+
+.head
+{
+  font-family: 'Faster One', cursive;
+  text-align: center;
+  font-size: 90px;
+  color: #cf253f;
+}
+.headTxt
+{
+  font-family: 'Orbitron', cursive;
+  text-align: center;
+  font-size: 35px;
+  color: whitesmoke;
+}
+
+/* .mainBck {
+  background-image: url("./carImg/img23.jpg");
+  opacity: 0.5;
+  z-index: -1;
+} */
+
+.box {
+  background-color: #0b0f1a;
+}
+
+.mainBox {
+  text-align: center;
+  backdrop-filter: blur(5px);
+  border-radius: 50px;
+  color: #cf253f;
+}
+
+.content {
+  text-align: center;
+}
+
+.btnFont
+{
+  font-family: 'Orbitron', cursive;
+}
